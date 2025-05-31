@@ -1,16 +1,16 @@
 package stepDefinition;
 
+import Utils.amazonUtil;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import Utils.*;
-
 public class amazon {
-    amazonUtil amazonutil=new amazonUtil();
+    amazonUtil amazonutil = new amazonUtil();
+
     @When("User click on {string} from dropdown menu and search for {string}")
-    public void userClickOnFromDropdownMenuAndTypeIPhone(String category,String searchvalue) throws InterruptedException {
-        amazonutil.searchiPhone(category,searchvalue);
+    public void userClickOnFromDropdownMenuAndTypeIPhone(String category, String searchvalue) throws InterruptedException {
+        amazonutil.searchiPhone(category, searchvalue);
 
     }
 
@@ -21,12 +21,12 @@ public class amazon {
 
     @Then("Type again {string} and click on {string} variant")
     public void typeAgainAndClickOnVariant(String searchagain, String variant) {
-      amazonutil.typeagainAndClickonspecificvariant(searchagain,variant);
+        amazonutil.typeagainAndClickonspecificvariant(searchagain, variant);
     }
 
     @And("click on search product and validate new tab is opened")
     public void clickOnSearchProductAndValidateNewTabIsOpened() {
-     amazonutil.validateNewtabisOpened();
+        amazonutil.validateNewtabisOpened();
     }
 
     @Then("Navigate to next tab and click on Visit the Apple Store link appears below Apple iPhone \"13\" \\(\"128\" GB) variant")
@@ -37,13 +37,14 @@ public class amazon {
 
     @And("Hover over the watch and verify quick look is displayed for the watch")
     public void hoverOverTheWatchAndVerifyQuickLookIsDisplayedForTheWatch() {
-      amazonutil.hoverAndDisplayquickTool();
+        amazonutil.hoverAndDisplayquickTool();
     }
 
     @And("Verify the newly opened modal is related to same product")
     public void verifyTheNewlyOpenedModalIsRelatedToSameProduct() {
-     amazonutil.verifyOpenedModalwindow();
+        amazonutil.verifyOpenedModalwindow();
     }
+
     @And("Click on Apple Watch dropdown and select Apple Watch SE GPS + Cellular")
     public void clickOnAppleWatchDropdownAndSelectAppleWatchSEGPSCellular() {
         amazonutil.clickApplewatchDropdownAndselect();
